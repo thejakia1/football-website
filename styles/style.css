@@ -34,9 +34,13 @@ header {
     display: flex;
     justify-content: space-between;
 }
-.header-intro:hover, .header-image:hover{
+.header-intro:hover {
     transform: scale(1.1);
-    transition: transform 2s ease-in-out;
+    transition: transform 3s ease-in-out;
+}
+.header-area:hover img{
+    transform: scale(1.1) rotate(360deg);
+    transition: transform 4s ease-in-out;
 }
 .header-intro{
     margin-left: 156px;
