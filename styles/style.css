@@ -33,7 +33,7 @@ header {
     display: flex;
     justify-content: space-between;
 }
-.header-area:hover {
+.header-area:hover{
     transform: scale(1.1);
     transition: transform 2s ease-in-out;
 }
