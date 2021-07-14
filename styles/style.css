@@ -3,7 +3,9 @@
 ---------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-/* ----------Common styles--------- */
+/* ----------
+Common styles
+--------- */
 
 body{
     font-family: "Poppins", sans-serif;
@@ -23,15 +25,19 @@ header {
     flex-wrap: wrap;
 }
 
-/* -------------
-        Header section
+/* ------------------
+    Header section
 --------------------- */
 
 .header-area{
     display: flex;
     justify-content: space-between;
 }
-.header-title{
+.header-area:hover {
+    transform: scale(1.1);
+    transition: transform 2s ease-in-out;
+}
+.header-intro{
     margin-left: 156px;
     margin-top: 207px;
     margin-bottom: 240px;
@@ -41,10 +47,13 @@ header {
     width: 50%;  
 }
 .header-button{
+    width: 168px;
+    padding: 24px 80px;
     text-align: center;
     background-color: #E02C6D;
 }
 .header-button a {
+    text-decoration: none;
     color: white;
 }
 .header-image img{
@@ -53,7 +62,7 @@ header {
     margin: 153px 140.99px 86px 102px;
 }
 
-/* Player  Style section */
+/* Player Album section */
 .top-players {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -78,7 +87,10 @@ header {
     padding: 5px 50px 5px;
 }
 
-/* footer section styles */
+/* -------------------
+footer section styles
+---------------------- */
+
 .footer-area {
     text-align: center;
     margin-bottom: 37px;
@@ -93,6 +105,73 @@ header {
     padding: 5px;
 }
 
-/* ===================================
+/* ================================
       Responsive with Media Query
 =================================== */
+@media (max-width: 360px) {
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        width: 695px;
+        height: 800px;
+        background-color: #2D25A0;
+    }
+    .header-area {
+        width: 360px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .header-intro{
+        width: 360px;
+        margin: 112px 66px 30px 120px;
+    }
+    .header-intro h1{
+        font-size: 36px;
+        font-weight: bold;
+    }
+    .header-button{
+        width: 168px;
+        padding: 24px 80px;
+        text-align: center;
+        background-color: #E02C6D;
+    }
+    .header-button a{
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+    }
+    .header-image img{
+        width: 329px;
+        height: 259.17px;
+        margin: 50px 16px 61.83px 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /* players style  */
+    .top-players {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* ==============
+    footer section 
+    ============== */
+    .footer-area {
+    text-align: center;
+    }
+    .footer-logo img {
+        margin-left: 71px;
+        margin-right: 71px;
+        width: 30%;
+    }
+    .footer-social-icons a{
+        text-decoration: none;
+        color: gray;
+        font-size: 25px;
+        padding: 5px;
+    }
+}
