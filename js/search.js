@@ -2,9 +2,13 @@ function searchTeam(query) {
   const q = query.toLowerCase().trim();
   const cards = document.querySelectorAll('.group-card');
   const rows  = document.querySelectorAll('.team-row');
+  const isMobile = window.innerWidth < 640;
 
   rows.forEach(r => r.classList.remove('search-match'));
-  cards.forEach(c => c.classList.remove('highlight'));
+  cards.forEach(c => {
+    c.classList.remove('highlight');
+    if (isMobile && !q) c.classList.remove('open');
+  });
 
   if (!q) return;
 
@@ -12,7 +16,9 @@ function searchTeam(query) {
     const name = (row.dataset.team || '').toLowerCase();
     if (name.includes(q)) {
       row.classList.add('search-match');
-      row.closest('.group-card').classList.add('highlight');
+      const card = row.closest('.group-card');
+      card.classList.add('highlight');
+      if (isMobile) card.classList.add('open');
     }
   });
 }

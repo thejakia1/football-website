@@ -1,10 +1,55 @@
-<nav class="sticky top-0 z-50 flex items-center justify-between h-[52px] px-6"
+<nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between h-[52px] px-6"
      style="background:rgba(6,10,20,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);">
   <div class="font-display text-2xl tracking-[2px]" style="color:var(--gold);">⚽ WC2026</div>
+
+  <!-- Desktop links -->
   <ul class="hidden sm:flex gap-1 list-none">
     <li><a href="#groups"    class="nav-link">Groups</a></li>
     <li><a href="#format"    class="nav-link">Format</a></li>
     <li><a href="#cities"    class="nav-link">Cities</a></li>
     <li><a href="#predictor" class="nav-link">Predictor</a></li>
   </ul>
+
+  <!-- Hamburger button (mobile only) -->
+  <button class="mob-ham" id="mobHam" aria-label="Toggle menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
+
+<!-- Mobile full-screen menu -->
+<div class="mob-menu" id="mobMenu" aria-hidden="true">
+  <div class="mob-menu-inner">
+
+    <div class="mob-menu-links">
+      <a href="#groups"    class="mob-menu-link" data-index="1">
+        <span class="mob-menu-num">01</span>
+        <span class="mob-menu-text">Groups</span>
+        <span class="mob-menu-arrow">→</span>
+      </a>
+      <a href="#format"    class="mob-menu-link" data-index="2">
+        <span class="mob-menu-num">02</span>
+        <span class="mob-menu-text">Format</span>
+        <span class="mob-menu-arrow">→</span>
+      </a>
+      <a href="#cities"    class="mob-menu-link" data-index="3">
+        <span class="mob-menu-num">03</span>
+        <span class="mob-menu-text">Cities</span>
+        <span class="mob-menu-arrow">→</span>
+      </a>
+      <a href="#predictor" class="mob-menu-link" data-index="4">
+        <span class="mob-menu-num">04</span>
+        <span class="mob-menu-text">Predictor</span>
+        <span class="mob-menu-arrow">→</span>
+      </a>
+    </div>
+
+    <div class="mob-menu-footer">
+      <span>⚽</span>
+      <span>FIFA World Cup 2026</span>
+      <span>June 11 – July 19</span>
+    </div>
+  </div>
+</div>
+

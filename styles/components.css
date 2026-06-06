@@ -163,6 +163,76 @@
 .city-country { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted); }
 .city-matches { font-family: var(--font-ui); font-size: 0.8rem; font-weight: 600; color: var(--gold); margin-top: 4px; }
 
+/* ===== MOBILE ACCORDION — GROUPS ===== */
+@media (max-width: 639px) {
+  .group-header {
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .group-card .group-teams {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+
+  .group-card.open .group-teams {
+    max-height: 240px;
+  }
+
+  .group-chevron {
+    font-size: 1.3rem;
+    color: var(--text-muted);
+    line-height: 1;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    padding-left: 4px;
+  }
+
+  .group-card.open .group-chevron {
+    transform: rotate(90deg);
+    color: var(--gold);
+  }
+}
+
+/* ===== MOBILE ACCORDION — FORMAT ===== */
+@media (max-width: 639px) {
+  .format-phase-label {
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 0;
+  }
+
+  .format-phase-section .format-row {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .format-phase-section.open .format-row {
+    max-height: 1200px;
+    padding-top: 0.75rem;
+  }
+
+  .format-phase-chevron {
+    font-size: 1.3rem;
+    color: var(--text-muted);
+    line-height: 1;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    margin-left: auto;
+  }
+
+  .format-phase-section.open .format-phase-chevron {
+    transform: rotate(90deg);
+    color: var(--gold);
+  }
+}
+
 /* ===== PREDICTOR ===== */
 .predictor-card {
   max-width: 660px; margin: 0 auto;
