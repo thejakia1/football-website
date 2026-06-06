@@ -75,6 +75,12 @@ body::before {
   50%       { box-shadow: 0 0 40px rgba(245,197,24,0.6); }
 }
 
+/* ===== CONTAINER ===== */
+.max-w-container {
+  max-width: 1080px;
+  width: 100%;
+}
+
 /* ===== UTILITIES ===== */
 .text-gold { color: var(--gold); }
 .text-red  { color: var(--red); }

@@ -2,6 +2,7 @@ const PARTIALS = [
   ['slot-nav',       'partials/nav.html'],
   ['slot-hero',      'partials/hero.html'],
   ['slot-stats',     'partials/stats.html'],
+  ['slot-schedule',  'partials/schedule.html'],
   ['slot-groups',    'partials/groups.html'],
   ['slot-format',    'partials/format.html'],
   ['slot-cities',    'partials/cities.html'],

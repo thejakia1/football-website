@@ -1,0 +1,27 @@
+<section class="py-16" id="schedule" style="background:var(--bg);">
+  <div class="max-w-container mx-auto px-4 sm:px-6">
+
+    <div class="text-center mb-10">
+      <span class="section-eyebrow">Full Schedule</span>
+      <h2 class="section-title">All 104 Matches</h2>
+      <p class="text-sm mt-2" style="color:var(--text-dim);">Every fixture from opening kick-off to the final whistle.</p>
+    </div>
+
+    <!-- Phase tabs -->
+    <div class="sched-tabs mb-3">
+      <button class="sched-phase-tab active" data-phase="group">⚽ Group Stage</button>
+      <button class="sched-phase-tab" data-phase="knockout">🏆 Knockout Stage</button>
+    </div>
+
+    <!-- Matchday sub-tabs (group stage only) -->
+    <div class="sched-tabs sched-md-row" id="schedMdRow">
+      <button class="sched-md-tab active" data-md="1">Round 1<span class="sched-tab-sub">Jun 11–17</span></button>
+      <button class="sched-md-tab" data-md="2">Round 2<span class="sched-tab-sub">Jun 18–24</span></button>
+      <button class="sched-md-tab" data-md="3">Round 3<span class="sched-tab-sub">Jun 26–Jul 2</span></button>
+    </div>
+
+    <!-- Match cards rendered by schedule.js -->
+    <div id="scheduleContainer"></div>
+
+  </div>
+</section>
