@@ -1,0 +1,72 @@
+<section class="py-16 px-6" id="predictor" style="background:var(--bg);">
+  <div class="max-w-container mx-auto">
+
+    <div class="text-center mb-10">
+      <span class="section-eyebrow">Your Call</span>
+      <h2 class="section-title">Pick Your Champion 🏆</h2>
+      <p class="text-sm mt-2" style="color:var(--text-dim);">Who are you backing? Pick a winner and share it with friends!</p>
+    </div>
+
+    <div class="predictor-card">
+      <div class="predictor-header">
+        <h3>🌟 Who lifts the trophy on July 19?</h3>
+        <p>Pick from the top favorites — then share your prediction!</p>
+      </div>
+      <div class="predictor-body">
+
+        <!-- Step 1: Region -->
+        <div class="predictor-step active" id="step-1">
+          <p class="font-ui font-bold tracking-[1px] mb-4 text-[0.85rem] uppercase" style="color:var(--text-dim);">Choose a Region</p>
+          <div class="pick-grid">
+            <button class="pick-btn" onclick="pickRegion('Europe', '🌍')">
+              <span class="pick-flag">🌍</span>
+              <span class="pick-name">Europe</span>
+            </button>
+            <button class="pick-btn" onclick="pickRegion('Americas', '🌎')">
+              <span class="pick-flag">🌎</span>
+              <span class="pick-name">Americas</span>
+            </button>
+            <button class="pick-btn" onclick="pickRegion('Africa', '🌍')">
+              <span class="pick-flag">🌍</span>
+              <span class="pick-name">Africa</span>
+            </button>
+            <button class="pick-btn" onclick="pickRegion('Asia/Pacific', '🌏')">
+              <span class="pick-flag">🌏</span>
+              <span class="pick-name">Asia/Pacific</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 2: Team -->
+        <div class="predictor-step" id="step-2">
+          <p class="font-ui font-bold tracking-[1px] mb-4 text-[0.85rem] uppercase" style="color:var(--text-dim);">Now Pick Your Champion</p>
+          <div class="pick-grid" id="teamPickGrid"></div>
+          <button onclick="goBack()" class="btn btn-outline w-full mt-2">← Back</button>
+        </div>
+
+        <!-- Step 3: Result -->
+        <div class="predictor-step" id="step-3">
+          <div class="result-card">
+            <div class="result-trophy" id="resultTrophy">🏆</div>
+            <div class="result-title" id="resultTitle">France</div>
+            <div class="result-subtitle" id="resultSubtitle">is going all the way in 2026!</div>
+            <div class="result-share-text" id="resultShareText"></div>
+            <div class="share-btns">
+              <button class="btn btn-fb" onclick="shareResult()">📘 Share on Facebook</button>
+              <button class="btn btn-outline" onclick="resetPredictor()">🔄 Try Again</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="step-nav" id="stepNav">
+          <span class="step-indicator" id="stepText">Step 1 of 2</span>
+          <div class="step-dots">
+            <div class="step-dot active" id="dot1"></div>
+            <div class="step-dot" id="dot2"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

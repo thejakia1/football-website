@@ -1,0 +1,236 @@
+/* ===== SEARCH BAR ===== */
+.search-bar {
+  max-width: 400px; margin: 0 auto 2rem;
+  position: relative;
+}
+
+.search-bar input {
+  width: 100%;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 12px 20px 12px 44px;
+  color: var(--text);
+  font-family: var(--font-ui);
+  font-size: 1rem; font-weight: 600;
+  letter-spacing: 1px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.search-bar input::placeholder { color: var(--text-muted); }
+.search-bar input:focus { border-color: var(--gold); }
+
+.search-icon {
+  position: absolute; left: 14px; top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted); font-size: 1.1rem;
+}
+
+/* ===== GROUP CARDS ===== */
+.group-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: all 0.25s;
+}
+.group-card:hover {
+  border-color: rgba(245,197,24,0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+}
+.group-card.highlight { border-color: var(--gold); box-shadow: 0 0 20px rgba(245,197,24,0.2); }
+
+.group-header {
+  background: linear-gradient(135deg, var(--bg3), rgba(245,197,24,0.06));
+  padding: 0.9rem 1rem;
+  display: flex; align-items: center; justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+}
+
+.group-letter { font-family: var(--font-display); font-size: 2rem; color: var(--gold); letter-spacing: 1px; }
+.group-label  { font-family: var(--font-ui); font-size: 0.65rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted); }
+
+.group-teams { padding: 0.5rem 0; }
+
+.team-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  transition: background 0.15s;
+  cursor: default;
+}
+.team-row:last-child { border-bottom: none; }
+.team-row:hover { background: var(--surface2); }
+.team-row.search-match { background: rgba(245,197,24,0.07); }
+
+.team-flag { font-size: 1.5rem; line-height: 1; }
+.team-name { font-family: var(--font-ui); font-size: 0.95rem; font-weight: 600; letter-spacing: 0.5px; flex: 1; }
+.team-rank { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 700; color: var(--text-muted); }
+
+/* ===== FORMAT FLOW ===== */
+.format-phase-label {
+  display: flex; align-items: center; gap: 8px;
+  font-family: var(--font-ui);
+  font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+.format-phase-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+.format-row {
+  display: grid;
+  grid-template-columns: 1fr 2rem 1fr 2rem 1fr;
+  align-items: stretch;
+}
+
+.format-arr-h {
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-muted);
+  font-size: 1rem;
+  opacity: 0.5;
+}
+
+.format-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.2s, border-color 0.2s;
+}
+.format-card:hover { background: var(--bg3); border-color: rgba(245,197,24,0.2); }
+.format-card--final { border-color: rgba(245,197,24,0.25); }
+
+.format-card-accent { position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+
+.format-card-num {
+  font-family: var(--font-display);
+  font-size: 4.5rem;
+  color: rgba(255,255,255,0.04);
+  position: absolute; bottom: -0.5rem; right: 0.75rem;
+  line-height: 1; pointer-events: none;
+}
+
+.format-card-icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
+
+.format-card-title {
+  font-family: var(--font-ui);
+  font-size: 0.95rem; font-weight: 700;
+  letter-spacing: 1px; text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+}
+
+.format-card-desc { font-size: 0.85rem; color: var(--text-dim); line-height: 1.55; }
+
+@media (max-width: 768px) {
+  .format-row { grid-template-columns: 1fr; gap: 0.75rem; }
+  .format-arr-h { transform: rotate(90deg); opacity: 0.4; }
+}
+
+/* ===== CITY TABS + CARDS ===== */
+.city-tab {
+  font-family: var(--font-ui);
+  font-size: 0.8rem; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  padding: 8px 16px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.city-tab.active,
+.city-tab:hover { background: var(--gold); color: #060A14; border-color: var(--gold); }
+
+.city-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1.2rem 1rem;
+  display: flex; flex-direction: column; gap: 6px;
+  transition: all 0.2s; cursor: default;
+}
+.city-card:hover { border-color: var(--border2); background: var(--surface2); }
+.city-card.hidden { display: none; }
+
+.city-flag    { font-size: 1.8rem; }
+.city-name    { font-family: var(--font-ui); font-size: 1.1rem; font-weight: 700; letter-spacing: 1px; }
+.city-country { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted); }
+.city-matches { font-family: var(--font-ui); font-size: 0.8rem; font-weight: 600; color: var(--gold); margin-top: 4px; }
+
+/* ===== PREDICTOR ===== */
+.predictor-card {
+  max-width: 660px; margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.predictor-header {
+  background: linear-gradient(135deg, rgba(245,197,24,0.15), rgba(232,35,78,0.1));
+  padding: 2rem; text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+.predictor-header h3 { font-family: var(--font-display); font-size: 2rem; letter-spacing: 2px; }
+.predictor-header p  { color: var(--text-dim); font-size: 0.9rem; margin-top: 0.5rem; }
+
+.predictor-body { padding: 2rem; }
+.predictor-step { display: none; }
+.predictor-step.active { display: block; }
+
+.pick-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.6rem; margin-bottom: 1.5rem;
+}
+
+.pick-btn {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  padding: 12px 8px;
+  background: var(--surface2);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer; transition: all 0.2s;
+}
+.pick-btn:hover   { border-color: rgba(245,197,24,0.4); background: rgba(245,197,24,0.06); }
+.pick-btn.selected { border-color: var(--gold); background: rgba(245,197,24,0.12); }
+
+.pick-flag { font-size: 2rem; }
+.pick-name { font-family: var(--font-ui); font-size: 0.8rem; font-weight: 700; color: var(--text); text-align: center; letter-spacing: 0.5px; }
+
+.result-card {
+  background: linear-gradient(135deg, rgba(245,197,24,0.1), rgba(232,35,78,0.05));
+  border: 1px solid var(--border2);
+  border-radius: var(--radius);
+  padding: 2rem; text-align: center;
+}
+.result-trophy   { font-size: 4rem; margin-bottom: 1rem; }
+.result-title    { font-family: var(--font-display); font-size: 2.2rem; color: var(--gold); letter-spacing: 2px; margin-bottom: 0.5rem; }
+.result-subtitle { font-size: 0.9rem; color: var(--text-dim); margin-bottom: 1.5rem; }
+
+.result-share-text {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  font-family: var(--font-ui); font-size: 1rem; font-weight: 600;
+  color: var(--text); margin-bottom: 1.5rem; line-height: 1.6;
+}
+
+.share-btns { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+
+.step-nav {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-top: 1.5rem; padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+.step-indicator { font-family: var(--font-ui); font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted); }
+.step-dots { display: flex; gap: 6px; }
+.step-dot  { width: 8px; height: 8px; border-radius: 50%; background: var(--border); transition: all 0.2s; }
+.step-dot.active { background: var(--gold); width: 24px; border-radius: 4px; }

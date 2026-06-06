@@ -1,0 +1,42 @@
+/* ===== NAV LINK ===== */
+.nav-link {
+  font-family: var(--font-ui);
+  font-size: 0.85rem; font-weight: 600;
+  letter-spacing: 1px; text-transform: uppercase;
+  color: var(--text-dim);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s;
+}
+.nav-link:hover { color: var(--gold); background: rgba(245,197,24,0.08); }
+
+/* ===== SECTION LABELS ===== */
+.section-eyebrow {
+  font-family: var(--font-ui);
+  font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 4px; text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+/* ===== STAT ITEM ===== */
+.stat-item {
+  display: flex; flex-direction: column; align-items: center;
+  padding: 1.8rem 1rem;
+  border-right: 1px solid var(--border);
+  transition: background 0.2s;
+}
+.stat-item:last-child { border-right: none; }
+.stat-item:hover { background: var(--surface); }
+
+@media (max-width: 640px) {
+  .stat-item:nth-child(3) { border-right: none; }
+}
