@@ -1,4 +1,4 @@
-const SITE_URL = 'https://thejakia1.github.io/fifa-wc-2026/';
+const SITE_URL = 'https://fifa-wc-2026.netlify.app/';
 
 function showShareToast(msg) {
   if (!document.getElementById('share-toast-style')) {
