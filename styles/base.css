@@ -2,20 +2,20 @@
 
 /* ===== DESIGN TOKENS ===== */
 :root {
-  --gold: #F5C518;
-  --gold-dim: #c79c0f;
-  --red: #E8234E;
-  --red-dim: #991530;
-  --bg: #060A14;
-  --bg2: #0D1220;
-  --bg3: #121829;
+  --gold: #C9A84C;
+  --gold-dim: #9A7A30;
+  --red: #7B9BB5;
+  --red-dim: #5A7A9A;
+  --bg: #0D0D0D;
+  --bg2: #141414;
+  --bg3: #1C1C1C;
   --surface: rgba(255,255,255,0.04);
-  --surface2: rgba(255,255,255,0.07);
-  --border: rgba(255,255,255,0.08);
-  --border2: rgba(245,197,24,0.25);
-  --text: #F0F0F0;
-  --text-dim: #8A9AB5;
-  --text-muted: #5a6880;
+  --surface2: rgba(255,255,255,0.06);
+  --border: rgba(255,255,255,0.07);
+  --border2: rgba(201,168,76,0.2);
+  --text: #EBEBEB;
+  --text-dim: #8A96A8;
+  --text-muted: #545E6E;
   --font-display: 'Bebas Neue', sans-serif;
   --font-ui: 'Barlow Condensed', sans-serif;
   --font-body: 'Barlow', sans-serif;
@@ -65,14 +65,14 @@ body::before {
   50%       { opacity: 0.5; transform: scale(0.7); }
 }
 
-@keyframes gridMove {
+@keyframes diagMove {
   0%   { background-position: 0 0; }
-  100% { background-position: 48px 48px; }
+  100% { background-position: 28px 28px; }
 }
 
 @keyframes glowPulse {
-  0%, 100% { box-shadow: 0 0 20px rgba(245,197,24,0.3); }
-  50%       { box-shadow: 0 0 40px rgba(245,197,24,0.6); }
+  0%, 100% { box-shadow: 0 0 20px rgba(201,168,76,0.2); }
+  50%       { box-shadow: 0 0 35px rgba(201,168,76,0.38); }
 }
 
 /* ===== CONTAINER ===== */

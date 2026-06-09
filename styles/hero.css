@@ -1,59 +1,39 @@
 /* ===== HERO ===== */
 .hero {
   position: relative;
-  min-height: 92vh;
+  min-height: auto;
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
   text-align: center;
-  padding: 4rem 1.5rem 3rem;
+  padding: 3rem 1.5rem 2.5rem;
   overflow: hidden;
 }
 
 .hero-bg {
   position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(245,197,24,0.12) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 50% at 90% 90%, rgba(232,35,78,0.08) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 40% at 10% 80%, rgba(30,60,180,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 45% at 50% -5%, rgba(201,168,76,0.07) 0%, transparent 70%),
     var(--bg);
   z-index: -1;
 }
 
 .hero-grid {
-  position: absolute; inset: 0;
-  background-image:
-    linear-gradient(rgba(245,197,24,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(245,197,24,0.03) 1px, transparent 1px);
-  background-size: 48px 48px;
-  z-index: -1;
-  animation: gridMove 20s linear infinite;
+  display: none;
 }
 
-.hero-badge {
-  display: inline-flex; align-items: center; gap: 8px;
+.hero-eyebrow {
   font-family: var(--font-ui);
-  font-size: 0.75rem; font-weight: 700;
-  letter-spacing: 3px; text-transform: uppercase;
-  color: var(--gold);
-  background: rgba(245,197,24,0.1);
-  border: 1px solid rgba(245,197,24,0.3);
-  border-radius: 100px;
-  padding: 6px 18px;
-  margin-bottom: 1.5rem;
+  font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 4px; text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
   animation: fadeDown 0.8s ease both;
-}
-
-.live-dot {
-  width: 7px; height: 7px;
-  background: var(--red);
-  border-radius: 50%;
-  animation: pulse 1.5s ease-in-out infinite;
 }
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(3.5rem, 12vw, 9rem);
-  line-height: 0.9;
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  line-height: 1;
   letter-spacing: 4px;
   animation: fadeDown 0.9s ease 0.1s both;
 }
@@ -61,21 +41,21 @@
 .hero-title span { color: var(--gold); }
 
 .hero-year {
-  display: block;
-  font-size: clamp(5rem, 18vw, 14rem);
-  color: transparent;
-  -webkit-text-stroke: 2px rgba(245,197,24,0.3);
-  letter-spacing: 8px;
+  display: inline;
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  color: var(--gold);
+  -webkit-text-stroke: 0;
+  letter-spacing: 4px;
 }
 
 .hero-sub {
   font-family: var(--font-ui);
-  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  font-size: clamp(0.75rem, 2vw, 0.95rem);
   font-weight: 600;
   letter-spacing: 4px;
   text-transform: uppercase;
   color: var(--text-dim);
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   animation: fadeDown 1s ease 0.2s both;
 }
 
@@ -83,7 +63,7 @@
 
 /* ===== COUNTDOWN ===== */
 .countdown-wrap {
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   animation: fadeUp 1s ease 0.4s both;
 }
 
@@ -105,8 +85,8 @@
   background: var(--surface2);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.2rem 1.5rem;
-  min-width: 90px;
+  padding: 0.75rem 1rem;
+  min-width: 70px;
   position: relative;
   overflow: hidden;
 }
@@ -120,7 +100,7 @@
 
 .cd-num {
   font-family: var(--font-display);
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 1;
   color: var(--gold);
   letter-spacing: 2px;
@@ -128,9 +108,9 @@
 
 .cd-sep {
   font-family: var(--font-display);
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: var(--text-muted);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .cd-label {
@@ -154,26 +134,27 @@
 
 /* ===== HERO CTAs ===== */
 .hero-ctas {
-  display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;
-  margin-top: 2.5rem;
+  display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center;
+  margin-top: 1.5rem;
   animation: fadeUp 1s ease 0.6s both;
 }
 
 .btn {
   font-family: var(--font-ui);
-  font-size: 0.9rem; font-weight: 700;
+  font-size: 0.78rem; font-weight: 700;
   letter-spacing: 2px; text-transform: uppercase;
-  padding: 14px 28px;
+  padding: 10px 22px;
   border-radius: 100px;
   border: none; cursor: pointer;
   transition: all 0.25s;
 }
 
-.btn-primary { background: var(--gold); color: #060A14; }
+.btn-primary { background: var(--gold); color: #fff; }
 .btn-primary:hover {
-  background: #fff;
+  background: var(--gold-dim);
+  color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(245,197,24,0.4);
+  box-shadow: 0 8px 24px rgba(201,168,76,0.25);
 }
 
 .btn-outline {

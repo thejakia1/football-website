@@ -71,10 +71,10 @@ function _openFacebook() {
 // Hero & footer share button
 function shareFacebook() {
   const text =
-    '🌍 FIFA World Cup 2026 is almost here and I am SO excited! 🏆\n\n' +
-    '48 teams, 3 nations, 104 matches — the BIGGEST World Cup ever!\n\n' +
-    "I've been exploring this awesome guide: group draws, match schedule, host cities, stats & a champion predictor 🏟️\n\n" +
-    '👉 Check it out: ' + SITE_URL;
+    '🌍 FIFA World Cup 2026 is almost here — I cannot wait! 🏆\n\n' +
+    '48 teams, 3 nations, 104 matches. The biggest one yet.\n\n' +
+    'Check out the full schedule, groups, host cities and pick your winner 🏟️\n\n' +
+    '👉 ' + SITE_URL;
 
   copyToClipboard(text);
   showShareToast('📋 Post text copied — paste it into your Facebook post!');

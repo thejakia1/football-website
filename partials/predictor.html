@@ -2,44 +2,37 @@
   <div class="max-w-container mx-auto px-4 sm:px-6">
 
     <div class="text-center mb-10">
-      <span class="section-eyebrow">Your Call</span>
-      <h2 class="section-title">Pick Your Champion 🏆</h2>
-      <p class="text-sm mt-2" style="color:var(--text-dim);">Who are you backing? Pick a winner and share it with friends!</p>
+      <span class="section-eyebrow">Predictor</span>
+      <h2 class="section-title">Pick your champion</h2>
     </div>
 
     <div class="predictor-card">
-      <div class="predictor-header">
-        <h3>Who lifts the trophy on July 19?</h3>
-        <p>Pick from the top favorites — then share your prediction!</p>
-      </div>
       <div class="predictor-body">
+
+        <p class="predictor-hint">Choose your team, then share your pick on Facebook.</p>
 
         <!-- Step 1: Region -->
         <div class="predictor-step active" id="step-1">
           <p class="font-ui font-bold tracking-[1px] mb-4 text-[0.85rem] uppercase" style="color:var(--text-dim);">Choose a Region</p>
-          <div class="pick-grid">
-            <button class="pick-btn" onclick="pickRegion('Europe', '🌍')">
-              <span class="pick-flag">🌍</span>
+          <div class="pick-grid pick-grid--regions">
+            <button class="pick-btn pick-btn--region" onclick="pickRegion('Europe', '')">
               <span class="pick-name">Europe</span>
             </button>
-            <button class="pick-btn" onclick="pickRegion('Americas', '🌎')">
-              <span class="pick-flag">🌎</span>
+            <button class="pick-btn pick-btn--region" onclick="pickRegion('Americas', '')">
               <span class="pick-name">Americas</span>
             </button>
-            <button class="pick-btn" onclick="pickRegion('Africa', '🌍')">
-              <span class="pick-flag">🌍</span>
+            <button class="pick-btn pick-btn--region" onclick="pickRegion('Africa', '')">
               <span class="pick-name">Africa</span>
             </button>
-            <button class="pick-btn" onclick="pickRegion('Asia/Pacific', '🌏')">
-              <span class="pick-flag">🌏</span>
-              <span class="pick-name">Asia/Pacific</span>
+            <button class="pick-btn pick-btn--region" onclick="pickRegion('Asia/Pacific', '')">
+              <span class="pick-name">Asia / Pacific</span>
             </button>
           </div>
         </div>
 
         <!-- Step 2: Team -->
         <div class="predictor-step" id="step-2">
-          <p class="font-ui font-bold tracking-[1px] mb-4 text-[0.85rem] uppercase" style="color:var(--text-dim);">Now Pick Your Champion</p>
+          <p class="font-ui font-bold tracking-[1px] mb-4 text-[0.85rem] uppercase" style="color:var(--text-dim);">Choose your team</p>
           <div class="pick-grid" id="teamPickGrid"></div>
           <button onclick="goBack()" class="btn btn-outline w-full mt-2">← Back</button>
         </div>
@@ -52,8 +45,8 @@
             <div class="result-subtitle" id="resultSubtitle">is going all the way in 2026!</div>
             <div class="result-share-text" id="resultShareText"></div>
             <div class="share-btns">
-              <button class="btn btn-fb" onclick="shareResult()">📘 Share on Facebook</button>
-              <button class="btn btn-outline" onclick="resetPredictor()">🔄 Try Again</button>
+              <button class="btn btn-fb" onclick="shareResult()">Share on Facebook</button>
+              <button class="btn btn-outline" onclick="resetPredictor()">Try Again</button>
             </div>
           </div>
         </div>

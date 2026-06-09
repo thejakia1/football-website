@@ -173,12 +173,10 @@ function dayHeader(dateStr, dayStr) {
 }
 
 function groupCard(m) {
-  const simBadge = m.sim ? `<span class="fx-sim">● simultaneous</span>` : '';
   return `
     <div class="fx-card">
       <div class="fx-card-top">
         <span class="fx-grp-badge">Group ${m.g}</span>
-        ${simBadge}
       </div>
       <div class="fx-teams">
         <div class="fx-team">
