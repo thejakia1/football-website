@@ -479,6 +479,30 @@
   font-weight: 600;
   letter-spacing: 1px;
   color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.fx-time {
+  color: var(--text-dim);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.fx-time-val {
+  color: var(--gold);
+}
+
+.fx-tz {
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.63rem;
+  letter-spacing: 0.5px;
 }
 
 /* ===== KNOCKOUT CARDS ===== */
