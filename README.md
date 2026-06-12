@@ -10,8 +10,8 @@ A fully static, single-page fan website covering everything about the **2026 FIF
 
 | Section | What it does |
 |---|---|
-| **Hero + Countdown** | Real-time countdown timer to kickoff on June 11, 2026 |
-| **Key Stats** | At-a-glance numbers — 48 teams, 12 groups, 104 matches, 16 host cities |
+| **Hero + Countdown** | Live countdown timer to the June 11 opening match; tournament runs June 11 – July 19, 2026 |
+| **Key Stats** | At-a-glance numbers — 48 teams, 12 groups, 104 matches, 39 days, 16 host cities, 3 nations |
 | **Full Match Schedule** | All 104 fixtures with matchday tabs, group badges, venues, and simultaneous match indicators |
 | **Knockout Stage** | Round of 32 through the Final (MetLife Stadium, July 19) with bracket-style cards |
 | **All 12 Groups** | Every group with team flags, live search to find any nation instantly |
